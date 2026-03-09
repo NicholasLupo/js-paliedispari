@@ -1,8 +1,12 @@
 //Prompt Utente Momentaneo
 let inPrompt = prompt('Inserisci la parola da esaminare');
 let infoUtente = inPrompt.toString();
-let infoUtenteNoSpace = infoUtente.replaceAll(' ', '');
-let infoUtenteUpperNoSpace = infoUtenteNoSpace.toUpperCase();
+
+//Rendiamo la stringa pulita
+let infoUtenteClean = infoUtente.replace(/[^\w\sàèéìòùÀÈÉÌÒÙ]/g, ''); //Si vede che ho cercato su google
+let infoUtenteCleanNorm = infoUtenteClean.normalize('NFD').replace(/[\u0300-\u036f]/g, ""); //Ora si nota
+let infoUtenteCleanNormNoSpace = infoUtenteCleanNorm.replaceAll(' ', '');
+let infoUtenteUpperCleanNormNoSpace = infoUtenteCleanNormNoSpace.toUpperCase();
 
 //Funzione Palindromo
 function toPalindrome(input) {
@@ -41,4 +45,4 @@ function toPalindrome(input) {
     }
 }
 
-toPalindrome(infoUtenteUpperNoSpace)
+toPalindrome(infoUtenteUpperCleanNormNoSpace)
