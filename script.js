@@ -3,57 +3,59 @@ let inPrompt = prompt('Inserisci la parola da esaminare');
 let infoUtente = inPrompt.toString();
 
 //Funzione Palindromo
-// function toPalindrome(input) {
+function toPalindrome(input) {
 
-//     for (let i = 0; i <= input.length; i++) {
+    let testArr = [];
 
-//         let typeUp = input[i];
+    for (let i = 0; i < input.length; i++) {
 
-//         if (input.length === typeUp) {
+        let typeUp = input[i];
+        testArr.push(typeUp);
+        console.log(typeUp);
+        console.log(testArr);
 
-//             let forTypeDown = typeUp;
-//             console.log(forTypeDown);
+        if (input.length == i + 1) {
 
-//             for (let i = 0; i >= forTypeDown; forTypeDown--) {
+            const rrAtset = testArr.toReversed();
+            console.log(rrAtset);
 
-//                 let typeDown = input[forTypeDown];
-//                 console.log(typeDown);
+            if (testArr === rrAtset) {
 
-//             }
-//         }
-//     }
-// }
+                const positiveOut = 'La parola è palindroma';
+                console.log(positiveOut);
+                return positiveOut;
 
-// toPalindrome();
+            } else {
 
-// if (input == NaN) {
+                const negativeOut = 'La parola non è palindroma';
+                console.log(negativeOut);
+                return negativeOut;
 
-//         const positiveOut = 'La parola è palindroma';
-//         console.log(positiveOut);
-
-//     } else {
-
-//         const negativeOut = 'La parola non è palindroma';
-//         console.log(negativeOut);
-
-// }
-
-
-// Test for per stampare le due parole in ordine crescente e descrescente
-for (let i = 0; i < infoUtente.length; i++) {
-
-    let typeUp = infoUtente[i];
-    console.log(typeUp);
-
-    if (infoUtente.length == i + 1) {
-
-        let forTypeDown = infoUtente.length - 1;
-
-        for (let i = 0; i <= forTypeDown; forTypeDown--) {
-
-            let typeDown = infoUtente[forTypeDown];
-            console.log(typeDown);
-
+            }
         }
     }
 }
+
+toPalindrome(infoUtente);
+
+// Test for per stampare le due parole in ordine crescente e descrescente
+
+// for (let i = 0; i < infoUtente.length; i++) {
+
+//     let typeUp = infoUtente[i];
+//     testArr.push(typeUp);
+//     console.log(typeUp);
+//     console.log(testArr);
+
+//     // if (infoUtente.length == i + 1) {
+
+//     //     let forTypeDown = infoUtente.length - 1;
+
+//     //     for (let i = 0; i <= forTypeDown; forTypeDown--) {
+
+//     //         let typeDown = infoUtente[forTypeDown];
+//     //         console.log(typeDown);
+
+//     //     }
+//     // }
+// }
