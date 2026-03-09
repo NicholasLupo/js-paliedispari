@@ -19,43 +19,24 @@ function toPalindrome(input) {
             const rrAtset = testArr.toReversed();
             console.log(rrAtset);
 
-            if (testArr === rrAtset) {
+            for (let t = 0; t < input.length; t++) {
 
-                const positiveOut = 'La parola è palindroma';
-                console.log(positiveOut);
-                return positiveOut;
+                if (testArr[t] !== rrAtset[t]) {
 
-            } else {
+                    const negativeOut = 'La parola non è palindroma';
+                    console.log(negativeOut);
+                    return negativeOut;
 
-                const negativeOut = 'La parola non è palindroma';
-                console.log(negativeOut);
-                return negativeOut;
+                } else if (testArr[t] === rrAtset[t] && input.length - 1 == t){
 
+                    const positiveOut = 'La parola è palindroma';
+                    console.log(positiveOut);
+                    return positiveOut;
+
+                }
             }
         }
     }
 }
 
 toPalindrome(infoUtente);
-
-// Test for per stampare le due parole in ordine crescente e descrescente
-
-// for (let i = 0; i < infoUtente.length; i++) {
-
-//     let typeUp = infoUtente[i];
-//     testArr.push(typeUp);
-//     console.log(typeUp);
-//     console.log(testArr);
-
-//     // if (infoUtente.length == i + 1) {
-
-//     //     let forTypeDown = infoUtente.length - 1;
-
-//     //     for (let i = 0; i <= forTypeDown; forTypeDown--) {
-
-//     //         let typeDown = infoUtente[forTypeDown];
-//     //         console.log(typeDown);
-
-//     //     }
-//     // }
-// }
