@@ -21,3 +21,11 @@ if (paOdiUpper !== 'PARI' && paOdiUpper !== 'DISPARI') {
     let error = alert('Valore inserito errato, riavvia la pagina e riprova');
 
 }
+
+//Computer Random
+function computerRandom (input) {
+
+    let numSorted = Math.floor((Math.random() * 5) + 1);
+    console.log(numSorted);
+
+}
