@@ -1,6 +1,8 @@
 //Prompt Utente Momentaneo
 let inPrompt = prompt('Inserisci la parola da esaminare');
 let infoUtente = inPrompt.toString();
+let infoUtenteNoSpace = infoUtente.replaceAll(' ', '');
+let infoUtenteUpperNoSpace = infoUtenteNoSpace.toUpperCase();
 
 //Funzione Palindromo
 function toPalindrome(input) {
@@ -39,4 +41,4 @@ function toPalindrome(input) {
     }
 }
 
-toPalindrome(infoUtente);
+toPalindrome(infoUtenteUpperNoSpace)
