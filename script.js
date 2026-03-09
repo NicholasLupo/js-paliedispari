@@ -1,28 +1,59 @@
 //Prompt Utente Momentaneo
-let infoUtente = 312;
-
-//Array da verificare con la funzione reverse()
-const toCheck = [];
-toCheck.unshift(infoUtente);
-console.log(toCheck);
-
+let inPrompt = prompt('Inserisci la parola da esaminare');
+let infoUtente = inPrompt.toString();
 
 //Funzione Palindromo
-function toPalindrome (input) {
+// function toPalindrome(input) {
 
-    if (input == input.reverse()) {
+//     for (let i = 0; i <= input.length; i++) {
 
-        const positiveOut = 'La parola è palindroma';
-        console.log(positiveOut);
+//         let typeUp = input[i];
 
-    } else {
+//         if (input.length === typeUp) {
 
-        const negativeOut = 'La parola non è palindroma';
-        console.log(negativeOut);
+//             let forTypeDown = typeUp;
+//             console.log(forTypeDown);
 
+//             for (let i = 0; i >= forTypeDown; forTypeDown--) {
+
+//                 let typeDown = input[forTypeDown];
+//                 console.log(typeDown);
+
+//             }
+//         }
+//     }
+// }
+
+// toPalindrome();
+
+// if (input == NaN) {
+
+//         const positiveOut = 'La parola è palindroma';
+//         console.log(positiveOut);
+
+//     } else {
+
+//         const negativeOut = 'La parola non è palindroma';
+//         console.log(negativeOut);
+
+// }
+
+
+// Test for per stampare le due parole in ordine crescente e descrescente
+for (let i = 0; i < infoUtente.length; i++) {
+
+    let typeUp = infoUtente[i];
+    console.log(typeUp);
+
+    if (infoUtente.length == i + 1) {
+
+        let forTypeDown = infoUtente.length - 1;
+
+        for (let i = 0; i <= forTypeDown; forTypeDown--) {
+
+            let typeDown = infoUtente[forTypeDown];
+            console.log(typeDown);
+
+        }
     }
 }
-
-toPalindrome(toCheck)
-console.log(toCheck); // Ho scoperto che la funzione reverse non è adatto per verificare 
-                      // se la parola è palindroma dato che inverte tutto l'array e non il singolo valore :(
